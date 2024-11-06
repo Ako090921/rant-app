@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rant tayo d2</title>
-
-    <!-- Favicon for browser tab -->
-    <link rel="icon" href="public/images/vnlogo.png" type="image/png">
-
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Custom Login</title>
+    <!-- Updated path to the CSS -->
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
     <div class="container">
         <div class="login-box">
-            <h2>Ano ang Rant mo?</h2>
+            <div class="header">
+                <!-- Use the logo image from public/images -->
+                <img src="/images/logo-placeholder.png" alt="Logo" class="logo">
+                <h2>Custom Login</h2>
+            </div>
             <form id="loginForm">
                 <div class="textbox">
                     <input type="text" id="nickname" name="nickname" placeholder="Nickname" required>
@@ -23,8 +24,8 @@
                 </div>
                 <button type="submit" class="btn">Submit</button>
             </form>
-            
-            <!-- Thank You message displayed here -->
+
+            <!-- Thank You message -->
             <div id="thankYouMessage" style="font-size: 16px; margin-top: 10px;"></div>
 
             <footer>
@@ -33,6 +34,7 @@
         </div>
     </div>
 
-    <script src="jscripts/script.js"></script>
+    <!-- Updated path to the script -->
+    <script src="/jscripts/script.js"></script>
 </body>
 </html>
