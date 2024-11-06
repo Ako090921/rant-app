@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('loginForm');
-    const thankYouMessage = document.getElementById('thankYouMessage');
     
     form.addEventListener('submit', async (event) => {
         event.preventDefault(); // Prevent form from refreshing the page
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Send data to the backend
         try {
-            const response = await fetch('http://localhost:3001/submit', {
+            const response = await fetch('/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nickname, rant })
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const result = await response.json();
             
             if (response.ok) {
-                thankYouMessage.textContent = result.message; // Show success message
+                alert(result.message); // Show success message
                 form.reset(); // Clear form
             } else {
                 alert('Error: ' + result.message);
@@ -36,3 +35,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
