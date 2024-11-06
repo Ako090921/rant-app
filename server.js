@@ -16,9 +16,9 @@ app.use(bodyParser.json());
 // Serve static files (e.g., your frontend)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Add a route for the root path (`/`)
+// Serve the index.html file at the root path
 app.get('/', (req, res) => {
-  res.send('Server is up and running!');
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Function to save form submissions as .txt files
